@@ -5,7 +5,7 @@ const App = () => {
     <div className="absolute flex items-end justify-end space-x-2 text-clip leading-3 text-red-500">
       App
       <button className="rounded bg-blue-500 px-4 py-2 text-base text-white">
-        Oiret
+        Oi
       </button>
     </div>
   )
