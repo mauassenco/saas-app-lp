@@ -1,17 +1,44 @@
-import clsx from "clsx"
-import { useState } from "react"
 import { Link as LinkScroll } from "react-scroll"
-
-const NavLink = ({ title }) => (
-  <LinkScroll className="base-bold max-lg:h5 cursor-pointer uppercase text-p4 transition-colors duration-500 hover:text-p1 max-lg:my-4">
-    {title}
-  </LinkScroll>
-)
+import { useEffect, useState } from "react"
+import clsx from "clsx"
 
 const Header = () => {
+  const [hasScrolled, setHasScrolled] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasScrolled(window.scrollY > 32)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
+  const NavLink = ({ title }) => (
+    <LinkScroll
+      onClick={() => setIsOpen(false)}
+      to={title}
+      offset={-100}
+      spy
+      smooth
+      activeClass="nav-active"
+      className="base-bold max-lg:h5 cursor-pointer uppercase text-p4 transition-colors duration-500 hover:text-p1 max-lg:my-4"
+    >
+      {title}
+    </LinkScroll>
+  )
+
   return (
-    <header className="fixed left-0 top-0 z-50 w-full py-10 transition-all duration-500 max-lg:py-4">
+    <header
+      className={clsx(
+        "fixed left-0 top-0 z-50 w-full py-10 transition-all duration-500 max-lg:py-4",
+        hasScrolled && "bg-black-100 py-2 backdrop-blur-[8px]",
+      )}
+    >
       <div className="container flex h-14 items-center max-lg:px-5">
         <a className="z-2 flex-1 cursor-pointer lg:hidden">
           <img src="/images/xora.svg" width={115} height={55} alt="logo" />
@@ -19,7 +46,7 @@ const Header = () => {
 
         <div
           className={clsx(
-            "w-full max-lg:fixed max-lg:left-0 max-lg:top-0 max-lg:w-full max-lg:bg-s2 max-lg:opacity-0",
+            "w-full transition-all duration-500 max-lg:fixed max-lg:left-0 max-lg:top-0 max-lg:w-full max-lg:bg-s2 max-lg:opacity-0",
             isOpen ? "max-lg:opacity-100" : "max-lg:pointer-events-none",
           )}
         >
@@ -52,7 +79,7 @@ const Header = () => {
                 </li>
 
                 <li className="nav-li">
-                  <NavLink title="FAQ" />
+                  <NavLink title="faq" />
                   <div className="dot" />
                   <NavLink title="download" />
                 </li>
@@ -64,14 +91,14 @@ const Header = () => {
                 src="/images/bg-outlines.svg"
                 width={960}
                 height={380}
-                alt="background outline"
+                alt="outline"
                 className="relative z-2"
               />
               <img
                 src="/images/bg-outlines-fill.png"
                 width={960}
                 height={380}
-                alt="background outline fill"
+                alt="outline"
                 className="absolute inset-0 opacity-5 mix-blend-soft-light"
               />
             </div>
@@ -84,7 +111,7 @@ const Header = () => {
         >
           <img
             src={`/images/${isOpen ? "close" : "magic"}.svg`}
-            alt="Menu button magic"
+            alt="magic"
             className="size-1/2 object-contain"
           />
         </button>
