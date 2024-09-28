@@ -1,7 +1,7 @@
 import clsx from "clsx"
 import { useState } from "react"
 // import { SlideDown } from "react-slidedown"
-import {motion, AnimatedPresence} from 'framer-motion'
+// import {motion, AnimatedPresence} from 'framer-motion'
 
 /**
  * The FaqItem component renders an item in the FAQ section.
@@ -56,11 +56,11 @@ const FaqItem = ({ item, index }) => {
       </div>
 
       {/* The answer is only rendered when the item is expanded */}
-      <SlideDown>
+      {/* <SlideDown> */}
         {activeId === item.id && (
           <div className="body-3 px-7 py-3.5">{item.answer}</div>
         )}
-      </SlideDown>
+      {/* </SlideDown> */}
 
       {/* The background of the item */}
       <div
