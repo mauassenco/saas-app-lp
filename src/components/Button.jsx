@@ -1,6 +1,9 @@
 import clsx from "clsx"
 import { Marker } from "./Marker.jsx"
 
+/**
+ * The Button component renders a button with a glowing effect.
+ */
 const Button = ({
   icon,
   children,
@@ -9,6 +12,9 @@ const Button = ({
   onClick,
   markerFill,
 }) => {
+  /**
+   * The inner component renders the button content.
+   */
   const Inner = () => (
     <>
       <span className="g4 inner-before relative flex min-h-[60px] items-center overflow-hidden rounded-2xl px-4 group-hover:before:opacity-100">
@@ -33,6 +39,9 @@ const Button = ({
     </>
   )
 
+  /**
+   * The outer component renders the button element.
+   */
   return href ? (
     <a
       className={clsx(

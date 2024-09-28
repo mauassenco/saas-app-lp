@@ -5,6 +5,7 @@ import Features from "./sections/Features.jsx"
 import Pricing from "./sections/Pricing.jsx"
 import Faq from "./sections/Faq.jsx"
 import Testimonials from "./sections/Testimonials.jsx"
+import Download from "./sections/Download.jsx"
 const App = () => {
   return (
     <main className="overflow-hidden">
@@ -14,6 +15,7 @@ const App = () => {
       <Pricing />
       <Faq />
       <Testimonials />
+      <Download />
     </main>
   )
 }
