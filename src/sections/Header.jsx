@@ -54,7 +54,12 @@ const Header = () => {
       // >
       //   {title}
       // </LinkScroll>
-      <p  onClick={handleClick} className="base-bold max-lg:h5 cursor-pointer uppercase text-p4 transition-colors duration-500 hover:text-p1 max-lg:my-4">{title}</p>
+      <p
+        onClick={handleClick}
+        className="base-bold max-lg:h5 cursor-pointer uppercase text-p4 transition-colors duration-500 hover:text-p1 max-lg:my-4"
+      >
+        {title}
+      </p>
     )
   }
 
@@ -115,17 +120,18 @@ const Header = () => {
                       alt="logo"
                     />
                   </LinkScroll> */}
-                  <div className={clsx(
-           
-           "cursor-pointer transition-transform duration-500 max-lg:hidden",
-         )}>
-                   <img
+                  <div
+                    className={clsx(
+                      "cursor-pointer transition-transform duration-500 max-lg:hidden",
+                    )}
+                  >
+                    <img
                       src="/images/xora.svg"
                       width={160}
                       height={55}
                       alt="logo"
                     />
-                    </div>
+                  </div>
                 </li>
 
                 <li className="nav-li">

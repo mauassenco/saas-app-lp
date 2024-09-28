@@ -57,9 +57,9 @@ const FaqItem = ({ item, index }) => {
 
       {/* The answer is only rendered when the item is expanded */}
       {/* <SlideDown> */}
-        {activeId === item.id && (
-          <div className="body-3 px-7 py-3.5">{item.answer}</div>
-        )}
+      {activeId === item.id && (
+        <div className="body-3 px-7 py-3.5">{item.answer}</div>
+      )}
       {/* </SlideDown> */}
 
       {/* The background of the item */}

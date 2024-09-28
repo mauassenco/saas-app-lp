@@ -13,7 +13,7 @@ const Faq = () => {
   return (
     <section>
       {/* <Element name="faq" className="relative"> */}
-        <div className="relative" id="faq">
+      <div className="relative" id="faq">
         <div className="container relative z-2 py-28">
           {/* The heading of the section */}
           <div>
@@ -55,7 +55,7 @@ const Faq = () => {
           {/* The line after the questions */}
           <div className="faq-lin_after absolute left-[calc(50%-1px)] top-0 -z-1 h-full w-0.5 bg-s2 max-lg:hidden" />
         </div>
-        </div>
+      </div>
       {/* </Element> */}
     </section>
   )

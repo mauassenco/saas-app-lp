@@ -13,7 +13,7 @@ const Hero = () => {
       aria-labelledby="hero-title"
     >
       {/* <Element name="hero"> */}
-        <div className="" id="hero">
+      <div className="" id="hero">
         <div className="container">
           <div className="relative z-2 max-w-512 max-lg:max-w-388">
             {/* The title and subtitle */}
@@ -33,7 +33,7 @@ const Hero = () => {
 
             {/* The button */}
             {/* <LinkScroll to="features" offset={-100} spy smooth> */}
-              <Button icon="/images/zap.svg">Try it now</Button>
+            <Button icon="/images/zap.svg">Try it now</Button>
             {/* </LinkScroll> */}
           </div>
 
@@ -46,7 +46,7 @@ const Hero = () => {
             />
           </div>
         </div>
-        </div>
+      </div>
       {/* </Element> */}
     </section>
   )

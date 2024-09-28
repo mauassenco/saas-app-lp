@@ -17,7 +17,7 @@ const Pricing = () => {
   return (
     <section>
       {/* <Element name="pricing"> */}
-        <div className="" id="pricing">
+      <div className="" id="pricing">
         <div className="container">
           <div className="pricing-head_before relative mx-auto max-w-960 border-l border-r border-s2 bg-s1/50 pb-40 pt-28 max-xl:max-w-4xl max-lg:border-none max-md:pb-32 max-md:pt-16">
             <h3 className="h3 max-lg:h4 max-md:h5 z-3 relative mx-auto mb-14 max-w-lg text-center text-p4 max-md:mb-11 max-sm:max-w-sm">
@@ -179,7 +179,7 @@ const Pricing = () => {
             ))}
           </div>
         </div>
-        </div>
+      </div>
       {/* </Element> */}
     </section>
   )

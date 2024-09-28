@@ -317,7 +317,7 @@
 .react-slidedown {
   height: 0;
   transition-property: none;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
 }
 
