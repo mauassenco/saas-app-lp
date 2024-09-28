@@ -115,7 +115,17 @@ const Header = () => {
                       alt="logo"
                     />
                   </LinkScroll> */}
-                  <p>LINKSCROLL PLACEHOLDER</p>
+                  <div className={clsx(
+           
+           "cursor-pointer transition-transform duration-500 max-lg:hidden",
+         )}>
+                   <img
+                      src="/images/xora.svg"
+                      width={160}
+                      height={55}
+                      alt="logo"
+                    />
+                    </div>
                 </li>
 
                 <li className="nav-li">
