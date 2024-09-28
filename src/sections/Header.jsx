@@ -1,4 +1,4 @@
-import { Link as LinkScroll } from "react-scroll"
+// import { Link as LinkScroll } from "react-scroll"
 import { useEffect, useState } from "react"
 import clsx from "clsx"
 
@@ -43,17 +43,18 @@ const Header = () => {
     }
 
     return (
-      <LinkScroll
-        to={title}
-        offset={-100}
-        spy
-        smooth
-        activeClass="nav-active"
-        className="base-bold max-lg:h5 cursor-pointer uppercase text-p4 transition-colors duration-500 hover:text-p1 max-lg:my-4"
-        onClick={handleClick}
-      >
-        {title}
-      </LinkScroll>
+      // <LinkScroll
+      //   to={title}
+      //   offset={-100}
+      //   spy
+      //   smooth
+      //   activeClass="nav-active"
+      //   className="base-bold max-lg:h5 cursor-pointer uppercase text-p4 transition-colors duration-500 hover:text-p1 max-lg:my-4"
+      //   onClick={handleClick}
+      // >
+      //   {title}
+      // </LinkScroll>
+      <p  onClick={handleClick} className="base-bold max-lg:h5 cursor-pointer uppercase text-p4 transition-colors duration-500 hover:text-p1 max-lg:my-4">{title}</p>
     )
   }
 
@@ -96,27 +97,25 @@ const Header = () => {
                 </li>
 
                 <li className="nav-logo">
-                  <LinkScroll
+                  {/* <LinkScroll
                     to="hero"
                     offset={-250}
                     spy
                     smooth
                     className={clsx(
-                      /**
-                       * The logo link.
-                       * The logo is hidden on mobile.
-                       * The logo has a transition effect.
-                       */
+           
                       "cursor-pointer transition-transform duration-500 max-lg:hidden",
                     )}
-                  >
-                    <img
+                  > 
+                  
+                     <img
                       src="/images/xora.svg"
                       width={160}
                       height={55}
                       alt="logo"
                     />
-                  </LinkScroll>
+                  </LinkScroll> */}
+                  <p>LINKSCROLL PLACEHOLDER</p>
                 </li>
 
                 <li className="nav-li">

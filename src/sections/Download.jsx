@@ -1,4 +1,4 @@
-import { Element } from "react-scroll"
+// import { Element } from "react-scroll"
 import { links, logos } from "../constants/index.jsx"
 import { Marker } from "../components/Marker.jsx"
 
@@ -9,8 +9,13 @@ import { Marker } from "../components/Marker.jsx"
 const Download = () => {
   return (
     <section>
-      <Element
+      {/* <Element
         name="download"
+        className="g7 relative pb-32 pt-24 max-lg:pb-24 max-md:py-16"
+      > */}
+            <div
+        id="download"
+
         className="g7 relative pb-32 pt-24 max-lg:pb-24 max-md:py-16"
       >
         <div className="container">
@@ -83,7 +88,8 @@ const Download = () => {
             ))}
           </ul>
         </div>
-      </Element>
+      </div>
+      {/* < Element/> */}
     </section>
   )
 }

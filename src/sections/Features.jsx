@@ -1,4 +1,4 @@
-import { Element } from "react-scroll"
+// import { Element } from "react-scroll"
 
 import { features, details } from "../constants/index.jsx"
 import Button from "../components/Button.jsx"
@@ -11,7 +11,8 @@ import Button from "../components/Button.jsx"
 const Features = () => {
   return (
     <section>
-      <Element name="features">
+      {/* <Element name="features"> */}
+        <div id="features">
         <div className="container">
           <div className="feature-after md:g7 relative flex flex-nowrap rounded-7xl border-2 border-s3 max-md:flex-col max-md:gap-3 max-md:rounded-none max-md:border-none md:flex-wrap md:overflow-hidden">
             {/* The features list */}
@@ -73,7 +74,8 @@ const Features = () => {
             </ul>
           </div>
         </div>
-      </Element>
+        </div>
+      {/* </Element> */}
     </section>
   )
 }

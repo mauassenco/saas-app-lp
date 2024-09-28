@@ -1,5 +1,5 @@
 import React from "react"
-import { Element, Link as LinkScroll } from "react-scroll"
+// import { Element, Link as LinkScroll } from "react-scroll"
 import Button from "../components/Button.jsx"
 /**
  * The Hero component renders the hero section of the page.
@@ -12,7 +12,8 @@ const Hero = () => {
       className="relative pb-40 pt-60 max-lg:pb-36 max-lg:pt-52 max-md:pb-32 max-md:pt-36"
       aria-labelledby="hero-title"
     >
-      <Element name="hero">
+      {/* <Element name="hero"> */}
+        <div className="" id="hero">
         <div className="container">
           <div className="relative z-2 max-w-512 max-lg:max-w-388">
             {/* The title and subtitle */}
@@ -31,9 +32,9 @@ const Hero = () => {
             </p>
 
             {/* The button */}
-            <LinkScroll to="features" offset={-100} spy smooth>
+            {/* <LinkScroll to="features" offset={-100} spy smooth> */}
               <Button icon="/images/zap.svg">Try it now</Button>
-            </LinkScroll>
+            {/* </LinkScroll> */}
           </div>
 
           {/* The background image */}
@@ -45,7 +46,8 @@ const Hero = () => {
             />
           </div>
         </div>
-      </Element>
+        </div>
+      {/* </Element> */}
     </section>
   )
 }
